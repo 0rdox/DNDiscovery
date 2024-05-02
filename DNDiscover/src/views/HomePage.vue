@@ -1,18 +1,20 @@
+
 <template>
-    <div class="flex justify-center items-center w-screen h-screen ">
-        <RouterLink to="/about" class="logo">
+    <div class="flex flex-col justify-center items-center w-screen h-screen ">
+        <h1 class="text-white font-bold hover:scale-125 transition duration-500 ease-in-out cursor-default">DNDiscover</h1>
+
+        <RouterLink to="/about" class="logo" draggable="false">
             <img src="@/assets/dice_white.png" alt="Vue logo" width="225" height="225" draggable="false" />
         </RouterLink>
     </div>
 </template>
 
 <style>
-    .logo {
-        transition: all 0.5s ease;
-    }
+.logo {
+    transition: all 0.5s ease;
+}
 
-    .logo:hover {
-        transform: rotate(-360deg);
-        color: green;
-    }
+.logo:hover {
+    transform: rotate(-360deg);
+}
 </style>
