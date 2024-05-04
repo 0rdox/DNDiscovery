@@ -6,10 +6,16 @@
         <h1 class="text-white font-bold hover:scale-125 transition duration-500 ease-in-out cursor-default">DNDiscover
         </h1>
 
-        <RouterLink to="/about" class="logo" draggable="false">
+        <RouterLink to="/map" class="logo" draggable="false">
             <img src="@/assets/dice_white.png" alt="Vue logo" width="225" height="225" draggable="false" />
         </RouterLink>
+        <div class="bottom-0 left-0">
+            <RouterLink to="/about">ABOUT</RouterLink>
+        </div>
     </div>
+
+
+
 </template>
 
 <style>
