@@ -12,4 +12,7 @@ module.exports = {
     extend: {},
   },
   plugins: [],
+  allowJs: true,
+
+  //didnt work?
 };

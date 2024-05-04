@@ -1,3 +1,4 @@
+
 <template>
 
     <body
@@ -28,7 +29,7 @@
     </body>
 </template>
 
-<script>
+<script lang="ts">
 export default {
     data() {
         return {
@@ -36,11 +37,11 @@ export default {
         };
     },
     methods: {
-        handleFileChange(event) {
+        handleFileChange(event: any) {
             const file = event.target.files[0];
             const reader = new FileReader();
 
-            reader.onload = (e) => {
+            reader.onload = (e: any) => {
                 this.selectedFile = e.target.result;
             };
 

@@ -1,16 +1,15 @@
-<template>
+<template class=" ">
 
-<nav>
+  <nav class="fixed">
     <router-link to="/">Home</router-link>
     <router-link to="/map">Map</router-link>
     <router-link to="/about">About</router-link>
   </nav>
-  <router-view v-slot="{ Component, route }">
-    <transition :name="route.meta.transition">
-    <component :is="Component" />
-  </transition>
-</router-view>
+  <router-view />
 </template>
+
+<!-- Or add lang = ts in all views, or add "allowJs": true in tsconfig.ts  ((should i change all .js to .ts? )) -->
+
 
 
 
