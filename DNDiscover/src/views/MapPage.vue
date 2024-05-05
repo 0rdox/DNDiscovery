@@ -1,9 +1,8 @@
-
 <template>
 
     <body
         :style="{ backgroundImage: `url(${selectedFile})`, backgroundRepeat: 'no-repeat', backgroundSize: 'contain', backgroundPosition: 'center' }"
-        class="border h-screen p-5">
+        class="border-4 border-zinc-800 border-dashed h-screen p-5">
         <!-- Dropzone -->
         <div class="flex justify-center fixed bottom-10 left-0 right-0">
             <label for="dropzone-file"
@@ -24,13 +23,13 @@
             </label>
         </div>
         <!-- End Dropzone -->
-        
+
 
     </body>
 </template>
 
 <script lang="ts">
-import {MapJS} from './MapPage.ts';
+import { MapJS } from './MapPage.ts';
 
 export default {
     mixins: [MapJS]
