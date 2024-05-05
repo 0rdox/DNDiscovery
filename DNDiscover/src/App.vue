@@ -1,41 +1,20 @@
-<template class=" ">
-
-  <nav class="fixed">
-    <router-link to="/">Home</router-link>
-    <router-link to="/map">Map</router-link>
-    <router-link to="/about">About</router-link>
+<template>
+  <!-- Navigation -->
+  <nav class="absolute right-0 left-0 flex justify-center">
+    <div class="border rounded-md solid px-2">
+      <router-link to="/"
+        class="text-white font-bold hover:scale-125 transition duration-500 ease-in-out p-3 inline-block">Home</router-link>
+      <p class="inline-block p-3">|</p>
+      <router-link to="/map"
+        class="text-white font-bold hover:scale-125 transition duration-500 ease-in-out p-3 inline-block">Map</router-link>
+      <p class="inline-block p-3">|</p>
+      <router-link to="/about"
+        class="text-white font-bold hover:scale-125 transition duration-500 ease-in-out p-3 inline-block">About</router-link>
+    </div>
   </nav>
+
+
+  <!-- Router View -->
   <router-view />
-</template>
-
-<!-- Or add lang = ts in all views, or add "allowJs": true in tsconfig.ts  ((should i change all .js to .ts? )) -->
-
-
-
-
-<!-- <template>
-  <nav>
-    <router-link to="/">Home</router-link>
-    <router-link to="/map">Map</router-link>
-    <router-link to="/about">About</router-link>
-  </nav>
-
-  <div>
-    <router-view v-slot="{ Component }">
-      <transition name="fade" mode="out-in">
-        <component :is="Component" />
-      </transition>
-    </router-view>
-  </div>
 
 </template>
-
-<style>
-.fade-enter-from, .fade-leave-tp {
-  opacity: 0;
-}
-
-.fade-enter-active, .fade-leave-active {
-  transition: opacity 0.5s;
-}
-</style> -->

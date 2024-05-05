@@ -30,23 +30,9 @@
 </template>
 
 <script lang="ts">
+import {MapJS} from './MapPage.ts';
+
 export default {
-    data() {
-        return {
-            selectedFile: null
-        };
-    },
-    methods: {
-        handleFileChange(event: any) {
-            const file = event.target.files[0];
-            const reader = new FileReader();
-
-            reader.onload = (e: any) => {
-                this.selectedFile = e.target.result;
-            };
-
-            reader.readAsDataURL(file);
-        }
-    }
+    mixins: [MapJS]
 }
 </script>

@@ -1,4 +1,3 @@
-
 <script lang="ts">
 import { ref } from 'vue'
 
@@ -22,10 +21,12 @@ export default {
         </h1>
 
 
-        <button @click="show = !show">Toggle</button>
+
+        <!-- Transition Example -->
+        <!-- <button @click="show = !show">Toggle</button>
         <Transition>
             <p v-if="show">hello</p>
-        </Transition>
+        </Transition> -->
 
 
         <RouterLink to="/map" class="logo" draggable="false">
