@@ -7,9 +7,13 @@ export default {
 
         return {
             show
+
         }
-    }
+
+    },
+
 }
+
 </script>
 
 <template>
@@ -19,7 +23,6 @@ export default {
     <div class="flex flex-col justify-center items-center  w-screen h-screen">
         <h1 class="text-white font-bold hover:scale-125 transition duration-500 ease-in-out cursor-default">DNDiscover
         </h1>
-
 
 
         <!-- Transition Example -->
@@ -58,32 +61,3 @@ export default {
     transform: rotate(-360deg);
 }
 </style>
-
-
-
-<!-- 
-    API CALL EXAMPLE
-    
-    <script>
-export default {
-    data() {
-        return {
-            apiData: null
-        };
-    },
-    mounted() {
-        this.fetchData();
-    },
-    methods: {
-        async fetchData() {
-            try {
-                const response = await fetch('https://api.chucknorris.io/jokes/random');
-                const data = await response.json();
-                this.apiData = data;
-            } catch (error) {
-                console.error(error);
-            }
-        }
-    }
-};
-</script> -->
