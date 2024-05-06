@@ -13,13 +13,10 @@ app.get("/status", (req, res) => {
   res.send({ message: "hello world" });
 });
 
+
+
 app.listen(process.env.PORT || 8081);
 
-//backend for:
-//account?
-//save character sheets
-//save notes?
-//save map position -> how to do this?
-
+//TODO: Account creation + Auth, Saving character sheets in DB, saving Notes (?), Saving map position on map (?)
 
 // https://youtu.be/Fa4cRMaTDUI?list=PLaRVQcAuLimG_qplzZFU-p6lsSS4czT7e&t=1914
