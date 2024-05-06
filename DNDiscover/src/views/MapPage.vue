@@ -25,13 +25,46 @@
         <!-- End Dropzone -->
 
 
+        <!-- API? -->
+        <p>{{ apiData }}</p>
     </body>
 </template>
 
 <script lang="ts">
-import { MapJS } from './MapPage.ts';
-
 export default {
-    mixins: [MapJS]
+    data() {
+        return {
+            apiData:null,
+            selectedFile: null,
+        }
+    },
+    mounted: function() {
+        this.fetchData();
+    },
+    methods:{
+        async fetchData() {
+            try {
+               const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+               const data = await response.json();
+               this.apiData = data.slice(0, 5); 
+            } catch(error) {
+                console.error(error);
+            }
+        },
+        handleFileChange(event: Event) {
+      const file = (event.target as HTMLInputElement)?.files?.[0]
+      const reader = new FileReader()
+
+      console.log('Handle File')
+      if (!file) return // Add this line to check if file is undefined
+
+      reader.onload = (e) => {
+        this.selectedFile = e.target?.result
+      }
+
+      reader.readAsDataURL(file)
+    },
+    }
 }
+
 </script>
