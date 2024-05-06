@@ -5,9 +5,10 @@ import CustomHeader from './components/CustomHeader.vue'
 
 <template>
   <!-- <ButtonCounter /> -->
-  <!-- <CustomHeader /> -->
+  <CustomHeader />
 
   <!-- Navigation -->
+  <!-- TODO: Move this to component? -->
   <nav v-if="!$route.meta.hideNavbar" class="absolute right-0 left-0 flex  justify-center">
     <div class="border-4  border-zinc-800 rounded-md solid bg-zinc-800 px-2">
       <router-link to="/"
