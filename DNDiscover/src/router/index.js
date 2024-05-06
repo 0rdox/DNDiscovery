@@ -33,11 +33,16 @@ import { createRouter, createWebHistory } from 'vue-router'
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: () => import('../views/HomePage.vue'),
+    name: 'splash',
+    component: () => import('../views/SplashScreen.vue'),
     meta: {
       hideNavbar: true
     }
+  },
+  {
+    path: '/home',
+    name: 'home',
+    component: () => import('../views/HomePage.vue')
   },
   {
     path: '/map',
