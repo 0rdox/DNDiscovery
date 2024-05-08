@@ -1,6 +1,5 @@
 <template>
     <p>ABOUT</p>
-    <p>{{ apiData }}</p>
 </template>
 
 <script lang='ts'>

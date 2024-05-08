@@ -25,11 +25,63 @@
         <!-- End Dropzone -->
 
         <!-- API testing -->
-        <p>{{ apiData }}</p>
+        <div v-for="item in apiData" :key="item.id">
+            <p>{{ item.id }}</p>
+            <p>{{ item.title }}</p>
+        </div>
+        <!-- <p>{{ apiData }}</p> -->
     </body>
 </template>
 
-<script>
+
+<!-- COMPOSITION API -->
+<script setup>
+import { onMounted } from 'vue'
+import { ref } from 'vue'
+
+// File Change function
+const selectedFile = ref(null)
+
+function handleFileChange(event) {
+    const file = event.target.files?.[0]
+    const reader = new FileReader()
+
+    console.log('Handle File')
+    if (!file) return
+
+    reader.onload = (e) => {
+        selectedFile.value = e.target?.result
+    }
+
+    reader.readAsDataURL(file)
+}
+
+
+
+//Fetch API Data
+const apiData = ref(
+);
+
+async function fetchData() {
+    try {
+        const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+        const data = await response.json();
+        apiData.value = data.slice(0, 5);
+    } catch (error) {
+        console.error(error);
+    }
+}
+//On Mount
+onMounted(() => {
+    console.log("Mounted");
+    fetchData();
+})
+</script>
+
+
+
+<!-- OPTIONS API 
+ <script>
 
 export default {
     data() {
@@ -68,4 +120,6 @@ export default {
     }
 }
 
-</script>
+</script> 
+-->
+

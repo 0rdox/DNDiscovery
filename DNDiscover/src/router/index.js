@@ -42,7 +42,7 @@ const routes = [
   {
     path: '/home',
     name: 'home',
-    component: () => import('../views/HomePage.vue')
+    component: () => import('../views/HomePage.vue'),
   },
   {
     path: '/map',
@@ -52,7 +52,12 @@ const routes = [
   {
     path: '/about',
     name: 'about',
-    component: () => import('../views/AboutPage.vue')
+    component: () => import('../views/AboutPage.vue'),
+  },
+  {
+    path: '/character',
+    name: 'character',
+    component: () => import('../views/CharacterPage.vue'),
   }
 ]
 

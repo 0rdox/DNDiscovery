@@ -4,27 +4,11 @@ import CustomHeader from './components/CustomHeader.vue'
 
 
 <template>
-  <!-- <ButtonCounter /> -->
-  <!-- <CustomHeader /> -->
-
-  <!-- Navigation -->
-  <!-- TODO: Move this to component? -->
-  <nav v-if="!$route.meta.hideNavbar" class="absolute right-0 left-0 flex  justify-center">
-    <div class="border-4  border-zinc-800 rounded-md solid bg-zinc-800 px-2">
-      <router-link to="/home"
-        class="text-white font-bold hover:scale-125 transition duration-500 ease-in-out p-3 inline-block">Home</router-link>
-      <p class="inline-block p-3">|</p>
-      <router-link to="/map"
-        class="text-white font-bold hover:scale-125 transition duration-500 ease-in-out p-3 inline-block">Map</router-link>
-      <p class="inline-block p-3">|</p>
-      <router-link to="/about"
-        class="text-white font-bold hover:scale-125 transition duration-500 ease-in-out p-3 inline-block">About</router-link>
-    </div>
-  </nav>
-  <!-- Router View -->
+  <custom-header />
   <router-view />
+</template>
 
-  <!-- TODO: Transitions -->
+<!-- TODO: Transitions -->
 <!-- TODO: Layout
 SplashScreen
 Homescreen
@@ -35,13 +19,33 @@ About
 Account(?)
 -->
 
+<!-- TODO: Test v-for and other v-commands -->
 
-  <!-- TODO: Dice tray + rolling, Character Sheets, Note board.  -->
-  <!-- Dice Tray: 
+
+<!-- TODO: Dice tray + rolling, Character Sheets, Note board.  -->
+<!-- Dice Tray: 
 Click on dice icon to the left (?), this slides a component to the right containing 3D (?) dice. You can add dice by clicking, and then button for roll.-->
-  <!-- Character Sheets:
+<!-- Character Sheets:
 Online template for character sheets, like editable pdf. -->
-  <!-- Note Board:
+<!-- Note Board:
 Click on note icon to the left (?), under/above dice. This slides a component to the right containing a note board. You can add notes, and delete them. 
  -->
-</template>
+
+
+ <!-- 
+Fade In Animation:
+  body {
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+ -->
